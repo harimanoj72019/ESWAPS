@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #00ff41;
+  /* Matrix/Neon Green */
+  --color-secondary: #050505;
+  /* Deep Black */
+  --color-accent: #111;
+  /* Glossy Black Accent */
+  --color-neon-green: #39ff14;
+}
+
+@theme {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-neon-green: var(--color-neon-green);
+  --font-sans: 'Inter', sans-serif;
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+body {
+  background-color: var(--color-secondary);
+  color: white;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@utility glass-gloss {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.5),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+@utility text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5), 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+@utility shine-effect {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent);
+    transform: skewX(-20deg);
+    animation: shine 6s infinite;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+
+  20% {
+    left: 200%;
+  }
+
+  100% {
+    left: 200%;
+  }
+}
