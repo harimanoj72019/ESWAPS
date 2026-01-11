@@ -16,9 +16,9 @@ function AppContent() {
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10 pointer-events-none mix-blend-overlay"></div>
 
       <header className="fixed top-0 w-full p-6 flex justify-between items-center z-50 backdrop-blur-sm border-b border-white/5">
-        <h1 className="text-3xl font-bold tracking-tighter text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]">
-          <span className="text-primary text-glow">E</span>SWAPS
-        </h1>
+        <div className="flex items-center gap-2">
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="ESWAPS" className="h-20 w-auto object-contain drop-shadow-[0_0_10px_rgba(0,255,65,0.3)]" />
+        </div>
         <div className="hidden md:block">
           <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 glass-gloss">
             <span className="w-2 h-2 bg-neon-green rounded-full animate-pulse shadow-[0_0_8px_#39ff14]"></span>
