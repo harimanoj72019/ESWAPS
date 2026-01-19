@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 80" fill="none">
+  <defs>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <style>
+    .text { font-family: 'Inter', sans-serif; font-weight: 800; font-style: italic; letter-spacing: -2px; }
+    .primary { fill: #00ff41; filter: url(#glow); }
+    .white { fill: #ffffff; }
+  </style>
+  <text x="10" y="60" font-size="60" class="text primary">E</text>
+  <text x="55" y="60" font-size="60" class="text white">SWAPS</text>
+</svg>

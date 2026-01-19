@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="#0a0a0a" />
+  <text x="32" y="48" font-family="'Inter', sans-serif" font-weight="800" font-style: "italic" font-size="44" fill="#00ff41" text-anchor="middle" filter="url(#glow)">E</text>
+</svg>
